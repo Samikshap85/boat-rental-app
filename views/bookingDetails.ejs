@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="http://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Alice:400,700" rel="stylesheet" type="text/css" />
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="background">
+			<img src="\img\lake.jpg"></img>
+		</div>
+		
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<!-- <h2>Digital Dunga</h2>
+						<p>Make your reservation</p> -->
+						<div class="booking-bg">
+							<div class="form-header">
+								<h2>
+									DIGITAL DUNGA
+								</h2>
+								<h3>
+									Weather Today at Lakeside is 
+								</h3>
+									<div><img class="circle-bg" src="https://openweathermap.org/img/wn/<%= weatherData.current.weather[0].icon %>@2x.png" alt='' /></div>
+									<h3 class="datashow"><%= weatherData.current.weather[0].description %></h3>
+								
+								<div class="showdata">
+									<div>
+										<span>Temperature:</span>
+										<span><%= weatherData.current.temp %>°C</span>
+									</div>
+									<div>
+										<span>Humidity:</span>
+										<span><%= weatherData.current.humidity %></span>
+									</div>
+
+									<div>
+										<span>Wind Speed:</span>
+										<span><%= weatherData.current.wind_speed %></span>
+									</div>
+									<div>
+										<span>Wind Degree:</span>
+										<span><%= weatherData.current.wind_deg %></span>
+									</div>
+
+								</div>
+								
+								
+							</div>
+						</div>
+						<form action="gotobookingpage">
+							<div class="center-align-right">
+								<div class="row form-right-header">
+									Booking Succesful! 
+								</div>
+								<div class="row form-right-header ft-4">
+									Here are the booking details 
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div>
+											<div>Name</div>
+											<div><%= bookingDetails.name %></div>
+										</div>
+										<div>Contact</div>
+										<div><%= bookingDetails.contact %></div>
+										<div>Ticket Amount</div>
+										<div><%= bookingDetails.ticketNo %></div>
+										<div>Booking Time</div>
+										<div><%= bookingDetails.time %></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
