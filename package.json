@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "cucumber-js --require cucumber.conf.js --require tests/acceptance/stepDefinitions/**/*.js --format @cucumber/pretty-formatter"
   },
   "dependencies": {
     "alert": "^5.0.12",
+    "chromium": "^3.0.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
@@ -16,5 +18,11 @@
     "morgan": "~1.9.1",
     "node-fetch": "2.6.4",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.23.1",
+    "playwright": "^1.23.1"
   }
 }

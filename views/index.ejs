@@ -33,7 +33,7 @@
 		<div class="background">
 			<img src="\img\lake.jpg"></img>
 		</div>
-		
+
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
@@ -46,53 +46,67 @@
 									DIGITAL DUNGA
 								</h2>
 								<h3>
-									Weather Today at Lakeside is 
+									Weather Today at Lakeside is
 								</h3>
-									<div><img class="circle-bg" src="https://openweathermap.org/img/wn/<%= weatherData.current.weather[0].icon %>@2x.png" alt='' /></div>
-									<h3 class="datashow"><%= weatherData.current.weather[0].description %></h3>
-								
+								<div><img class="circle-bg"
+										src="https://openweathermap.org/img/wn/<%= weatherData.current.weather[0].icon %>@2x.png"
+										alt='' /></div>
+								<h3 class="datashow" id="weatherStatus">
+									<%= weatherData.current.weather[0].description %>
+								</h3>
+
 								<div class="showdata">
 									<div>
 										<span>Temperature:</span>
-										<span><%= weatherData.current.temp %>°C</span>
+										<span>
+											<%= weatherData.current.temp %>°C
+										</span>
 									</div>
 									<div>
 										<span>Humidity:</span>
-										<span><%= weatherData.current.humidity %></span>
+										<span>
+											<%= weatherData.current.humidity %>
+										</span>
 									</div>
 
 									<div>
 										<span>Wind Speed:</span>
-										<span><%= weatherData.current.wind_speed %></span>
+										<span>
+											<%= weatherData.current.wind_speed %>
+										</span>
 									</div>
 									<div>
 										<span>Wind Degree:</span>
-										<span><%= weatherData.current.wind_deg %></span>
+										<span>
+											<%= weatherData.current.wind_deg %>
+										</span>
 									</div>
 
 								</div>
-								
-								
+
+
 							</div>
 						</div>
-						<form action="gotobookingpage">
+						<form action="/gotobookingpage" method="post">
 							<div class="center-align">
 								<div class="row form-right-header">
-									Want to Book a Boat? 
+									Want to Book a Boat?
 								</div>
 								<div class="row">
 									<div class="col-md-6">
-									
-						
-									<div class="form-group">
-										<span class="form-label">Select Date</span>
-										<input class="form-control" type="date" required>
+
+
+										<div class="form-group">
+											<span class="form-label">Select Date</span>
+											<input id="dateSelector" class="form-control" type="date" value=<%- new
+												Date().toISOString().split("T")[0] -%> required>
+										</div>
 									</div>
-									</div>							
-								<div class="form-btn">
-									<button type="submit" class="submit-btn form-margin" >Check availability</button>
+									<div class=" form-btn">
+										<button type="submit" id="availabilityButton"
+											class="submit-btn form-margin">Check availability</button>
+									</div>
 								</div>
-							</div>
 						</form>
 					</div>
 				</div>

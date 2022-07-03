@@ -33,7 +33,7 @@
 		<div class="background">
 			<img src="\img\lake.jpg"></img>
 		</div>
-		
+
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
@@ -46,56 +46,76 @@
 									DIGITAL DUNGA
 								</h2>
 								<h3>
-									Weather Today at Lakeside is 
+									Weather Today at Lakeside is
 								</h3>
-									<div><img class="circle-bg" src="https://openweathermap.org/img/wn/<%= weatherData.current.weather[0].icon %>@2x.png" alt='' /></div>
-									<h3 class="datashow"><%= weatherData.current.weather[0].description %></h3>
-								
+								<div><img class="circle-bg"
+										src="https://openweathermap.org/img/wn/<%= weatherData.current.weather[0].icon %>@2x.png"
+										alt='' /></div>
+								<h3 class="datashow">
+									<%= weatherData.current.weather[0].description %>
+								</h3>
+
 								<div class="showdata">
 									<div>
 										<span>Temperature:</span>
-										<span><%= weatherData.current.temp %>°C</span>
+										<span>
+											<%= weatherData.current.temp %>°C
+										</span>
 									</div>
 									<div>
 										<span>Humidity:</span>
-										<span><%= weatherData.current.humidity %></span>
+										<span>
+											<%= weatherData.current.humidity %>
+										</span>
 									</div>
 
 									<div>
 										<span>Wind Speed:</span>
-										<span><%= weatherData.current.wind_speed %></span>
+										<span>
+											<%= weatherData.current.wind_speed %>
+										</span>
 									</div>
 									<div>
 										<span>Wind Degree:</span>
-										<span><%= weatherData.current.wind_deg %></span>
+										<span>
+											<%= weatherData.current.wind_deg %>
+										</span>
 									</div>
 
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 						<form action="gotobookingpage">
 							<div class="center-align-right">
-								<div class="row form-right-header">
-									Booking Succesful! 
+								<div class="row form-right-header" id="successful">
+									Booking Succesful!
 								</div>
 								<div class="row form-right-header ft-4">
-									Here are the booking details 
+									Here are the booking details
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div>
 											<div>Name</div>
-											<div><%= bookingDetails.name %></div>
+											<div id="bookingName">
+												<%= bookingDetails.name %>
+											</div>
 										</div>
 										<div>Contact</div>
-										<div><%= bookingDetails.contact %></div>
-										<div>Ticket Amount</div>
-										<div><%= bookingDetails.ticketNo %></div>
+										<div id="bookingContact">
+											<%= bookingDetails.contact %>
+										</div>
+										<div>Number of Tickets</div>
+										<div id="ticketNo">
+											<%= bookingDetails.ticketNo %>
+										</div>
 										<div>Booking Time</div>
-										<div><%= bookingDetails.time %></div>
-							</div>
+										<div id="bookingTime">
+											<%= bookingDetails.time %>
+										</div>
+									</div>
 						</form>
 					</div>
 				</div>

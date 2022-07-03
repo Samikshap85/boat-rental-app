@@ -29,12 +29,12 @@
 </head>
 
 <body>
-	
-	<div id="booking" class="section" >
+
+	<div id="booking" class="section">
 		<div class="background">
 			<img src="\img\lake.jpg"></img>
 		</div>
-		
+
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
@@ -42,36 +42,36 @@
 						<div class="booking-bg">
 							<div class="form-header center-align-left">
 								<h2>Packages</h2>
-								<table class="table table-bordered table-dark">
+								<table class="table table-bordered table-dark" id="packages">
 									<thead>
-									  <tr>
-										
-										<th scope="col">Hour</th>
-										
-										<th scope="col">Prices</th>
-									  </tr>
+										<tr>
+
+											<th scope="col">Hour</th>
+
+											<th scope="col">Prices</th>
+										</tr>
 									</thead>
 									<tbody>
-									  <tr>
-										
-										<td>1 Hour</td>
-										
-										<td>600</td>
-									  </tr>
-									  <tr>
-										
-										<td>Half Day</td>
-										
-										<td>1500</td>
-									  </tr>
-									  <tr>
-										
-										
-										<td>Whole day</td>
-										<td>2500</td>
-									  </tr>
+										<tr>
+
+											<td>1 Hour</td>
+
+											<td>600</td>
+										</tr>
+										<tr>
+
+											<td>Half Day</td>
+
+											<td>1500</td>
+										</tr>
+										<tr>
+
+
+											<td>Whole day</td>
+											<td>2500</td>
+										</tr>
 									</tbody>
-								  </table>
+								</table>
 							</div>
 						</div>
 						<form method="post" action="/save-booking">
@@ -80,40 +80,43 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">Name</span>
-											<input class="form-control" type="text" name="name" placeholder="Enter your name here" required>
+											<input class="form-control" type="text" id="name" name="name"
+												placeholder="Enter your name here" required>
 										</div>
 									</div>
-									
+
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">Contact</span>
-											<input class="form-control" type="number" name="contact" placeholder='Enter contact details'required>
+											<input class="form-control" type="number" id="contact" name="contact"
+												placeholder='Enter contact details' required>
 										</div>
 									</div>
-									
+
 								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<span class="form-label">Tickets</span>
-											<input class="form-control" type="number" name="ticketNo" placeholder="Enter Ticket Amount" required>
+											<input class="form-control" type="number" id="ticket" name="ticketNo"
+												placeholder="Enter Ticket Amount" required>
 										</div>
-								</div>
+									</div>
 								</div>
 
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="inputMDEx1" class="form-label">Booking Time</label>
-											<input type="time" id="inputMDEx1" name="checkIn" class="form-control">
+											<input type="time" name="checkIn" id="time" class="form-control">
 										</div>
 
 									</div>
 								</div>
 								<div class="form-btn">
-								<button type="submit" class="submit-btn">Submit</button>
+									<button type="submit" class="submit-btn" id="submit">Submit</button>
 								</div>
 							</div>
 						</form>
